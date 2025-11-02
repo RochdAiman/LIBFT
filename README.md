@@ -1,88 +1,89 @@
 # Libft
 
-My first project at [1337/42 School](https://42.fr) — a custom C library that reimplements standard C library functions and adds linked list utilities.
+Libft is a foundational C library developed as part of the curriculum at [42 School](https://www.42.fr/). It aims to reimplement a selection of essential C standard library functions, along with additional utility functions, to strengthen your understanding of low-level programming, memory management, and code organization.
 
----
+## Table of Contents
 
-## 📘 Overview
+- [About](#about)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
 
-Libft is a foundational project that aims to recreate a set of functions from the standard C library (libc) and implement additional tools for memory management, strings, and linked lists.
+## About
 
-It’s the base for almost every future project at 1337/42 — understanding memory, pointers, and data structures.
+Libft serves as your personal C library, providing a set of functions for memory operations, string manipulations, linked lists, and more. This project is typically the first step for 42 students to get hands-on experience with C and to master the basics of programming and software design.
 
----
+## Features
 
-## 🧠 Skills Learned
-- Memory allocation and management in C  
-- Function pointers and linked lists  
-- Static library creation (`ar`, `ranlib`)  
-- Writing Makefiles and following strict coding norms  
-- Defensive coding and error handling  
+- Memory manipulation (`memset`, `memcpy`, `memmove`, etc.)
+- String manipulation (`strlen`, `strcpy`, `strcat`, etc.)
+- Character checks (`isalpha`, `isdigit`, `isalnum`, etc.)
+- Case conversion (`toupper`, `tolower`)
+- Linked list operations (bonus part)
+- Other utility functions (`atoi`, `calloc`, `strdup`, etc.)
 
----
+## Getting Started
 
-⚙️ Compilation
+### Prerequisites
 
-To build the library, simply run:
+- GCC or any C compiler
+- Make
 
-make
+### Installation
 
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/<your-username>/libft.git
+   cd libft
+   ```
 
-Other useful rules:
+2. Compile the library:
+   ```sh
+   make
+   ```
 
-make all      # Compile .o files and create libft.a
-make clean    # Remove object files (.o)
-make fclean   # Remove object files + libft.a
-make re       # Recompile everything
-make bonus    # Include linked list (bonus) functions
+   This will generate a `libft.a` static library file.
 
+## Project Structure
 
-After compilation, a static library called libft.a will be created.
-You can use it in your own projects like this:
-
-gcc main.c -L. -lft
-
-🧩 Project Structure
+```
 libft/
-│
-├── Makefile
-├── libft.h
-├── ft_*.c                 # Mandatory functions
-│
-└── bonus/
-    ├── ft_lstnew_bonus.c
-    ├── ft_lstadd_front_bonus.c
-    ├── ft_lstadd_back_bonus.c
-    ├── ft_lstsize_bonus.c
-    ├── ft_lstlast_bonus.c
-    ├── ft_lstdelone_bonus.c
-    ├── ft_lstclear_bonus.c
-    ├── ft_lstiter_bonus.c
-    └── ft_lstmap_bonus.c
-🧵 Bonus Functions
+├── ft_*.c         # Source files for each function
+├── ft_*.h         # Header files (if any)
+├── libft.h        # Main header file with function prototypes
+├── Makefile       # Build instructions
+└── README.md      # Project documentation
+```
 
-Libft also includes a full set of linked list utilities, allowing creation, iteration, and deletion of dynamic data structures.
+## Usage
 
-🏆 Achievements
+1. Include `libft.h` in your C files:
+   ```c
+   #include "libft.h"
+   ```
 
-✅ Score: 124/125 (validated on first try)
-✅ Norminette: 100% clean
-✅ Memory: No leaks, no crashes
-✅ Bonus: Fully implemented and validated
+2. Link the compiled library when building your project:
+   ```sh
+   gcc your_program.c -L. -lft -o your_program
+   ```
 
-💻 Author
+## Testing
 
-Aiman ROCHD
+- Use the included tests or create your own.
+- You can also use [libft-unit-test](https://github.com/alelievr/libft-unit-test) or similar testers to validate your implementation.
 
-🚀 1337 Student | Passionate about low-level programming, logic, and clean C code
+## Contributing
 
-📄 License
+Contributions are welcome! Feel free to fork this repository, submit issues, or propose improvements.
 
-This project is part of the 42/1337 curriculum and follows its academic guidelines.
-You can use it for learning or as a reference — but not for direct submission.
+## License
 
-🌟 Acknowledgments
+This project is for educational purposes at 42 School. Please consult the school's policy before distributing outside the 42 network.
 
-Special thanks to my peers, evaluators, and the 1337 community for support and debugging help during this project.
+---
 
-🧠 “Understanding the basics builds the strongest foundation.”
+Made with :sparkles: by [Aiman Rochd] for 42 School.
